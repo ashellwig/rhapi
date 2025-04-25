@@ -20,7 +20,7 @@ def generate_keypair(output_directory_str: str):
     Args:
         output_directory_str (str): Directory to output the key files.
     """
-    output_directory_path: Path = output_directory_str
+    output_directory_path: Path = Path(output_directory_str)
     output_file_plain: Path = output_directory_path / 'unencrypted_keys.txt'
     output_file_b64: Path = output_directory_path / 'encrypted_keys.txt'
 
