@@ -15,16 +15,16 @@
     "python.defaultInterpreterPath": "/home/ahellwig/source/repos/github.com/ashellwig/rhapi/venv/bin/python",
     //// Linting
     "pylint.enabled": true,
-    "pylint.args": ["--rcfile=.pylintrc"],
+    "pylint.args": ["--rcfile=pyproject.toml"],
     //// Formatting
     "yapf.path": [],
     "yapf.args": [
         "--style",
-        ".style.yapf"
+        "pyproject.toml"
     ],
-    //// Docstrings
-    "autoDocstring.docstringFormat": "google",
     /* ---- Misc. ---- */
+    // Docstrings
+    "autoDocstring.docstringFormat": "google",
     // GitHub CoPilot
     "github.copilot.enable": {
         "*": false,
