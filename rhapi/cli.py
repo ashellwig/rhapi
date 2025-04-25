@@ -5,7 +5,7 @@
 
 import click
 
-from rhapi.tools.cli import cli_add_one
+from rhapi.tools.cli import cli_add_one, cli_generate_keypair
 
 
 @click.group()
@@ -14,6 +14,7 @@ def cli():
 
 
 cli.add_command(cli_add_one, name='add-one')
+cli.add_command(cli_generate_keypair, name='gen-keypair')
 
 if __name__ == '__main__':
     cli()
