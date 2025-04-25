@@ -21,11 +21,17 @@ requires-python = ">= 3.13"
 keywords = ["robinhood", "cryptocurrency", "crypto", "trading", "market"]
 license = "MIT"
 dependencies = [
+    "click==8.1.8",
     "pydocstyle==6.3.0",
     "pylint==3.3.6",
+    "pynacl==1.5.0",
+    "pytest==8.3.5",
     "requests==2.32.3",
     "yapf==0.43.0"
 ]
+
+[project.scripts]
+rhapi = "rhapi.cli:cli"
 
 # ---- CONFIGURATION: pydocstyle ----
 [tool.pydocstyle]
@@ -186,7 +192,7 @@ ignored-classes = [
 
 [tool.pylint.format]
 max-line-length = 80
-ignore-long-lines = "(?x)(^\\s*(\\#\ )?<?https?://\\S+>?$|^\\s*(from\\s+\\S+\\s+)?import\\s+.+$)"
+ignore-long-lines = "(?x)(^\\s*(\\#\\ )?<?https?://\\S+>?$|^\\s*(from\\s+\\S+\\s+)?import\\s+.+$)"
 single-line-if-stmt = true
 max-module-lines = 99999
 indent-string='    '
